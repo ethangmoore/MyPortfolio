@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(142, 249, 171);
+    color: white;
+}
+
+#header {
+    background-color: rgb(18, 148, 59);
+    border: 2px solid white;
+    border-radius: 25px;
+    text-align: center;
+}
+
+/* Image Section */
+
+#img {
+    width: 200px;
+    height: 204px;
+    border-radius: 50%;
+}
+
+/* Icons Section */
+
+@media (max-width: 990px) {
+    .iconContainer {
+        flex-direction: column;
+    }
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconContainer a{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 20px 10px rgb(0, 0, 0, 0.05);
+    margin: 0 30px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.iconContainer a .socialIcon{
+    font-size: 30px;
+    line-height: 80px;
+    position: relative;
+    z-index: 10;
+    transition: color 0.5s;
+}
+
+.iconContainer a::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(-45deg, rgb(23, 227, 90), rgb(18, 148, 59));
+    position: absolute;
+    transition: 0.5s;
+}
+
+.iconContainer a:hover::after {
+    top: 0;
+}
+
+.iconContainer a:hover .socialIcon {
+    color: black;
+}
+
+.iconContainer a:hover {
+    transform: translateY(-10px);
+}
+
+/* Skills Section */
+
+#skills {
+    background-color: rgb(23, 227, 90);
+    border: 2px solid white;
+    border-radius: 25px;
+    text-align: center;
+}
